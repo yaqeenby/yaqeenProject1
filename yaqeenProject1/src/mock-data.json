@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Post",
+      "content": "Lorem ipsum..."
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "content": "Dolor sit amet..."
+    }
+  ]
+}

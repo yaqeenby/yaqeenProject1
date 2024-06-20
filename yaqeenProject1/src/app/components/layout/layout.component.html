@@ -258,9 +258,7 @@
 
     <div class="section mt-4">
       <label class="section-title text-uppercase">Wallets</label>
-      <div class="d-flex mt-3 w-100" style="height: 397.2px; ">
-        <canvas id="myCanvas" style="width: 100%; height: 100%;"></canvas>
-      </div>
+      <app-line-chart height="397.2px" width="auto" [lines]="lines" [highLightedPoint]="{ x: 77, y: 95 }"></app-line-chart>
     </div>
 
     <div class="row mt-5">
