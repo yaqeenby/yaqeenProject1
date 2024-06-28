@@ -1,0 +1,44 @@
+.overview-box {
+  border-radius: 9px;
+  border: 0.91px solid #312F62;
+  box-shadow: 0 33.67px 27.3px 0 #1B183F;
+}
+
+.overview-box-number {
+  font-size: 15.47px;
+  color: white;
+}
+
+.overview-box-currency {
+  font-size: 10.92px;
+  color: white;
+  font-weight: 600;
+  opacity: 50%
+}
+
+.overview-box-per {
+  font-size: 10.1px;
+  color: white;
+}
+
+.selected-box.overview-box {
+  background-image: linear-gradient(#40DDFF 0%, #14BAE3 19%, #13B1E6 69%, #11AADF 82%, #0B98C5 100%);
+  box-shadow: 0 0px 82.71px;
+}
+
+
+.overview-box-per.red {
+  color: #E3507A;
+}
+
+.overview-box-per.green {
+  color: #50E3C2;
+}
+
+.selected-box svg path {
+   fill: white !important;
+}
+
+.selected-box svg rect {
+  fill: white !important;
+}

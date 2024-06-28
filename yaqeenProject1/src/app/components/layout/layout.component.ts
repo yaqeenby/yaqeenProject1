@@ -10,19 +10,32 @@ import { Line } from '../../types/line.type';
 export class LayoutComponent implements OnInit, AfterViewInit {
   items = [1, 2, 3, 4, 5];
   lines: Line[] = [];
+
+  cardLine1: Line;
+  cardLine2: Line;
+  cardLine3: Line;
+  cardLine4: Line;
+
+  currencyChart1: Line;
+  currencyChart2: Line;
+  currencyChart3: Line;
+
+  trendCards: any[];
+
+  toggleMenu: boolean = true;
   constructor(private userService: UserService) {
     const data = [
       { x: 0, y: 50 },
-      { x: 1, y: 60 },
-      { x: 2, y: 70 },
-      { x: 3, y: 65 },
-      { x: 4, y: 80 },
-      { x: 5, y: 85 },
-      { x: 6, y: 90 },
-      { x: 7, y: 94 },
-      { x: 8, y: 57 },
-      { x: 9, y: 105 },
-      { x: 10, y: 110 }
+      { x: 11, y: 60 },
+      { x: 22, y: 70 },
+      { x: 33, y: 65 },
+      { x: 44, y: 80 },
+      { x: 55, y: 85 },
+      { x: 66, y: 90 },
+      { x: 77, y: 94 },
+      { x: 88, y: 57 },
+      { x: 99, y: 105 },
+      { x: 100, y: 110 }
     ];
 
     const data2 = [
@@ -138,7 +151,247 @@ export class LayoutComponent implements OnInit, AfterViewInit {
         x: 0,
         y: 3.64
       }
-    })
+    });
+
+
+
+
+
+
+
+
+
+
+    const data3 = [
+      { x: 0, y: 77 },
+      { x: 22, y: 40 },
+      { x: 44, y: 88 },
+      { x: 55, y: 70 },
+      { x: 66, y: 40 },
+      { x: 77, y: 95 },
+      { x: 100, y: 100 },
+    ];
+
+    this.cardLine1 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: '#63C178'
+          },
+          {
+            start: 0.83,
+            color: 'rgba(54, 187, 255, 46.6%)'
+          },
+          {
+            start: 1,
+            color: 'rgba(193, 247, 147, 0.01%)'
+          }
+        ]
+      },
+      shadow: {
+        color: 'rgba(12, 10 ,32, 54.36%)',
+        blur: 9.1,
+        x: 0,
+        y: 9.1
+      }
+    }
+
+    this.cardLine2 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: 'rgba(163, 48 ,255, 0.01%)'
+          },
+          {
+            start: 0.39,
+            color: '#BC3DCB'
+          },
+          {
+            start: 1,
+            color: '#E3507A'
+          }
+        ]
+      },
+      shadow: {
+        color: 'rgba(12, 10 ,32, 54.36%)',
+        blur: 9.1,
+        x: 0,
+        y: 9.1
+      }
+    }
+
+    this.cardLine3 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: '#FFAD57'
+          },
+          {
+            start: 0.77,
+            color: 'rgba(234, 255, 0, 46.6%)'
+          },
+          {
+            start: 1,
+            color: 'rgba(255, 133, 2, 0.01%)'
+          }
+        ]
+      },
+      shadow: {
+        color: 'rgba(12, 10 ,32, 54.36%)',
+        blur: 9.1,
+        x: 0,
+        y: 9.1
+      }
+    }
+
+    this.cardLine4 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: 'rgba(255, 219, 48, 0.01%)'
+          },
+          {
+            start: 0.39,
+            color: '#E27034'
+          },
+          {
+            start: 1,
+            color: '#3EDEF6'
+          }
+        ]
+      },
+      shadow: {
+        color: 'rgba(12, 10 ,32, 54.36%)',
+        blur: 9.1,
+        x: 0,
+        y: 9.1
+      }
+    }
+
+    this.trendCards = [
+      {
+        currency1: 'BTC',
+        currency2: 'USD',
+        per: '-5.23%',
+        chart: this.cardLine1
+      },
+      {
+        currency1: 'BTC',
+        currency2: 'USD',
+        per: '-5.23%',
+        chart: this.cardLine2
+      },
+      {
+        currency1: 'BTC',
+        currency2: 'USD',
+        per: '-5.23%',
+        chart: this.cardLine3
+      },
+      {
+        currency1: 'BTC',
+        currency2: 'USD',
+        per: '-5.23%',
+        chart: this.cardLine4
+      },
+    ]
+
+
+
+
+
+
+    
+
+    let currencyDataUp = [
+      { x: 0, y: 0 },
+      { x: 25, y: 50 },
+      { x: 50, y: 75 },
+      { x: 75, y: 50 },
+      { x: 100, y: 100 }
+    ];
+
+
+    this.currencyChart1 = {
+      label: '',
+      points: currencyDataUp,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: '#AAFFF7'
+          },
+          {
+            start: 1,
+            color: '#FFFFFF'
+          }
+        ]
+      }
+    }
+
+    this.currencyChart2 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: 'rgba(163, 48 ,255, 0.01%)'
+          },
+          {
+            start: 0.39,
+            color: '#BC3DCB'
+          },
+          {
+            start: 1,
+            color: '#E3507A'
+          }
+        ]
+      }
+    }
+
+    this.currencyChart3 = {
+      label: '',
+      points: data3,
+      color: {
+        type: 'linear',
+        stops: [
+          {
+            start: 0,
+            color: '#309AFF'
+          },
+          {
+            start: 0.29,
+            color: '#309AFF'
+          },
+          {
+            start: 0.65,
+            color: '#5364AE'
+          },
+          {
+            start: 1,
+            color: 'rgba(112, 54, 107, 0.01%)'
+          }
+        ]
+      }
+    }
   }
 
   ngOnInit() {

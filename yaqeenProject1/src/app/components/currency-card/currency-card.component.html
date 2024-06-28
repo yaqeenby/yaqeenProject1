@@ -1,0 +1,25 @@
+<div class="{{selected? 'selected-box' : ''}} overview-box d-flex gap-4 align-items-center p-3 px-4">
+  <ng-content select="[img]"></ng-content>
+
+  <div class="d-flex flex-column align-items-end gap-2">
+    <div class="d-flex align-items-center gap-3">
+      <label class="overview-box-number">{{number}}</label>
+      <span class="overview-box-currency">{{currency}}</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <app-line-chart height="15px" width="32px" [lines]="[chart]" [showChartGrids]="false" [margin]="0" [lineWidth]="1"></app-line-chart>
+
+      <div class="d-flex align-items-center gap-2">
+        <svg *ngIf="chartDirection == 'low'" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.27472 2.63934L2.4474 1.81202C2.14279 1.50741 1.64892 1.50741 1.34431 1.81202C1.0397 2.11663 1.0397 2.6105 1.34431 2.91511L2.17163 3.74243L-0.00683594 5.9209H5.45319V0.460873L3.27472 2.63934Z" fill="#E3507A" />
+        </svg>
+
+        <svg *ngIf="chartDirection == 'up'" width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4.09552 3.7425L3.2682 4.56982C2.96359 4.87443 2.46972 4.87443 2.16511 4.56982C1.8605 4.2652 1.8605 3.77133 2.16511 3.46672L2.99243 2.6394L0.813965 0.460938H6.27399V5.92096L4.09552 3.7425Z" fill="#50E3C2" />
+        </svg>
+
+        <label class="overview-box-per {{selected? 'text-white' : (chartDirection == 'up'? 'green': 'red')}}">{{per}}</label>
+      </div>
+    </div>
+  </div>
+</div>

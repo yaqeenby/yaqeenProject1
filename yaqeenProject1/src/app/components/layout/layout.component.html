@@ -1,9 +1,5 @@
 <div class="d-flex">
-  <!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-    Button with data-bs-target
-  </button>-->
-
-  <div class="offcanvas1 offcanvas-start col-3 col-xxl-2 py-5 sideMenu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-md offcanvas-start col-3 col-xxl-2 py-5 sideMenu" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-body d-flex flex-column h-100">
       <div class="d-flex align-items-center gap-3 menu-item px-5 mt-5">
         <svg class="system-logo" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,45 +75,10 @@
     </div>
   </div>
 
-  <div class="col-12 col-md-9 col-xxl-10 p-5 page">
-    <div class="d-flex justify-content-between">
-      <div class="d-flex flex-column">
-        <label class="page-title">Dashboard</label>
-        <p class="mb-0 page-description">With all of the styling tool options available in today's market</p>
-      </div>
-      <div class="d-flex align-items-center gap-4">
-        <!--search-->
-        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="9.61965" cy="9.68557" r="8.64504" stroke="#5B5A99" stroke-width="1.82001" />
-          <path d="M15.5347 16.5107L19.8962 20.8723" stroke="#5B5A99" stroke-width="1.82001" />
-        </svg>
-
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.844863 2.7702C0.844863 1.76504 1.65971 0.950195 2.66487 0.950195C3.67003 0.950195 4.48488 1.76504 4.48488 2.7702C4.48488 3.77537 3.67003 4.59021 2.66487 4.59021C1.65971 4.59021 0.844863 3.77537 0.844863 2.7702ZM0.844727 10.0503C0.844727 9.04516 1.65957 8.23031 2.66473 8.23031C3.6699 8.23031 4.48474 9.04516 4.48474 10.0503C4.48474 11.0555 3.6699 11.8703 2.66473 11.8703C1.65957 11.8703 0.844727 11.0555 0.844727 10.0503ZM9.94471 0.950242C8.93955 0.950242 8.1247 1.76509 8.1247 2.77025C8.1247 3.77541 8.93955 4.59026 9.94471 4.59026C10.9499 4.59026 11.7647 3.77541 11.7647 2.77025C11.7647 1.76509 10.9499 0.950242 9.94471 0.950242ZM8.1247 10.0503C8.1247 9.04516 8.93955 8.23031 9.94471 8.23031C10.9499 8.23031 11.7647 9.04516 11.7647 10.0503C11.7647 11.0555 10.9499 11.8703 9.94471 11.8703C8.93955 11.8703 8.1247 11.0555 8.1247 10.0503ZM17.2251 0.950242C16.2199 0.950242 15.4051 1.76509 15.4051 2.77025C15.4051 3.77541 16.2199 4.59026 17.2251 4.59026C18.2302 4.59026 19.0451 3.77541 19.0451 2.77025C19.0451 1.76509 18.2302 0.950242 17.2251 0.950242ZM15.4051 10.0503C15.4051 9.04516 16.2199 8.23031 17.2251 8.23031C18.2302 8.23031 19.0451 9.04516 19.0451 10.0503C19.0451 11.0555 18.2302 11.8703 17.2251 11.8703C16.2199 11.8703 15.4051 11.0555 15.4051 10.0503ZM2.66473 15.5103C1.65957 15.5103 0.844727 16.3251 0.844727 17.3303C0.844727 18.3355 1.65957 19.1503 2.66473 19.1503C3.6699 19.1503 4.48474 18.3355 4.48474 17.3303C4.48474 16.3251 3.6699 15.5103 2.66473 15.5103ZM8.1247 17.3303C8.1247 16.3251 8.93955 15.5103 9.94471 15.5103C10.9499 15.5103 11.7647 16.3251 11.7647 17.3303C11.7647 18.3355 10.9499 19.1503 9.94471 19.1503C8.93955 19.1503 8.1247 18.3355 8.1247 17.3303ZM17.2251 15.5103C16.2199 15.5103 15.4051 16.3251 15.4051 17.3303C15.4051 18.3355 16.2199 19.1503 17.2251 19.1503C18.2302 19.1503 19.0451 18.3355 19.0451 17.3303C19.0451 16.3251 18.2302 15.5103 17.2251 15.5103Z" fill="#5B5A99" />
-        </svg>
-
-        <!--notifications-->
-        <div class="rounded-pill p-2 px-3 notifications-btn d-flex align-items-center gap-2">
-          <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.73557 0.680176C3.76145 0.680176 2.89893 1.30957 2.60177 2.23726L0.185547 9.78022H9.28559L6.86937 2.23726C6.5722 1.30957 5.70969 0.680176 4.73557 0.680176ZM3.37055 10.6902C3.11926 10.6902 2.91555 10.8939 2.91555 11.1452C2.91555 11.3965 3.11926 11.6002 3.37055 11.6002H6.10056C6.35185 11.6002 6.55556 11.3965 6.55556 11.1452C6.55556 10.8939 6.35185 10.6902 6.10056 10.6902H3.37055Z" fill="white" />
-          </svg>
-          <label>15</label>
-        </div>
-
-        <!--login user-->
-        <div class="d-flex align-items-center gap-2 login-user">
-          <img src="../../../assets/images/login-user-img.jpg" width="38" height="36" class="rounded" />
-          <div class="d-flex align-items-center gap-2">
-            <label>Yaqeen Baniyounes</label>
-            <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.32373 1.54785L3.64111 4.27786L0.958483 1.54785" stroke="#5B5A99" stroke-width="1.82001" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="col-12 col-md-9 col-xxl-10 p-5 page" style="height: 100vh; overflow: hidden; overflow-y: auto;">
 
 
+    <app-nav-bar></app-nav-bar>
 
 
 
@@ -127,186 +88,97 @@
 
     <div class="section mt-4">
       <label class="section-title text-uppercase">Wallets</label>
-      <div class="d-flex gap-4 mt-3">
-        <div class="col-12 col-sm-3 col-lg-2 selected-box overview-box d-flex gap-4 align-items-center p-3 px-4">
-          <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_21_3031)">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3401 8.23002L11.3538 11.0403H15.3859C16.1021 11.0403 16.6824 10.458 16.6788 9.74191L16.6778 9.52841C16.6744 8.81218 16.0884 8.23002 15.3721 8.23002H11.8921H11.3401ZM17.1908 15.3121L17.1897 15.0865C17.1859 14.2877 16.533 13.6391 15.7343 13.6391H15.3988H11.3667L11.382 16.7596H15.7495C16.5482 16.7596 17.1947 16.1099 17.1908 15.3121ZM18.4704 12.1221C19.2728 12.8615 19.7816 13.9152 19.7873 15.0866L19.7884 15.3122C19.7993 17.5423 17.993 19.3574 15.762 19.3574H15.6633L15.669 20.551H13.0713L13.0655 19.3574H12.0008L12.0066 20.551H9.40891L9.40308 19.3574H8.79668H7.50838L7.49571 16.7597H8.784L8.76886 13.6392L8.75607 11.0404L8.74238 8.2301H7.45408L7.44141 5.63141H9.3361L9.32903 4.1709H11.9267L11.9338 5.63141H12.9986L12.9914 4.1709H15.5892L15.5963 5.64364C17.6357 5.76738 19.2656 7.45968 19.2757 9.52849L19.2767 9.74199C19.2811 10.6385 18.9778 11.4625 18.4704 12.1221Z" fill="white" />
-            </g>
-            <defs>
-              <filter id="filter0_d_21_3031" x="0.161372" y="0.530881" width="26.9072" height="30.94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                <feOffset dy="3.64002" />
-                <feGaussianBlur stdDeviation="3.64002" />
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0744452 0" />
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_21_3031" />
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_21_3031" result="shape" />
-              </filter>
-            </defs>
-          </svg>
-
-          <div class="d-flex flex-column align-items-end gap-2">
-            <div class="d-flex align-items-center gap-3">
-              <label class="overview-box-number">1.9678</label>
-              <span class="overview-box-currency">BTC</span>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-              <svg width="32" height="11" viewBox="0 0 32 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.75146 10.0992C1.75146 10.0992 4.29231 5.38921 7.21149 7.01097C10.1307 8.63274 10.509 10.0992 13.1038 9.12614C15.6987 8.15308 15.8611 -0.070819 18.1315 1.55095C20.402 3.17271 26.0063 6.41625 30.8716 1.55095" stroke="url(#paint0_linear_21_3024)" stroke-width="1.82001" stroke-linecap="round" stroke-linejoin="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_21_3024" x1="20.1634" y1="-0.811417" x2="14.217" y2="14.3067" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#AAFFF7" />
-                    <stop offset="1" stop-color="white" />
-                  </linearGradient>
-                </defs>
-              </svg>
-
-              <div class="d-flex align-items-center gap-2">
-                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.44318 3.7425L2.61586 4.56982C2.31125 4.87443 1.81738 4.87443 1.51277 4.56982C1.20816 4.2652 1.20816 3.77133 1.51277 3.46672L2.34009 2.6394L0.161621 0.460938H5.62165V5.92096L3.44318 3.7425Z" fill="white" />
-                </svg>
-                <label class="overview-box-per">+12,5%</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-12 col-sm-3 col-lg-2 overview-box d-flex gap-4 align-items-center p-3 px-4">
-          <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17726 9.3623L0.452148 12.6631L8.17726 16.9511L15.8993 12.6631L8.17726 9.3623Z" fill="#010101" fill-opacity="0.6" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.452148 12.6634L8.17726 16.9513V0.621094L0.452148 12.6634Z" fill="#535175" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17725 0.621094V16.9513L15.8993 12.6634L8.17725 0.621094Z" fill="#434162" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.452148 14.0386L8.17726 24.2635V18.3265L0.452148 14.0386Z" fill="#535175" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17725 18.3265V24.2635L15.9054 14.0386L8.17725 18.3265Z" fill="#434162" />
-          </svg>
-
-          <div class="d-flex flex-column align-items-end gap-2">
-            <div class="d-flex align-items-center gap-3">
-              <label class="overview-box-number">23.234</label>
-              <span class="overview-box-currency">ETH</span>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-              <svg width="31" height="11" viewBox="0 0 31 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M29.8926 9.70886C29.8926 9.70886 27.3517 4.44707 24.4326 6.06884C21.5134 7.69061 18.792 7.71343 14.3322 2.79612C9.87248 -2.1212 6.54774 7.66142 1.68245 2.79612" stroke="url(#paint0_linear_21_3044)" stroke-width="1.82001" stroke-linecap="round" stroke-linejoin="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_21_3044" x1="12.4694" y1="-0.836365" x2="18.2794" y2="14.1971" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#A330FF" stop-opacity="0.01" />
-                    <stop offset="0.393247" stop-color="#BC3DCB" />
-                    <stop offset="1" stop-color="#E3507A" />
-                  </linearGradient>
-                </defs>
-              </svg>
-
-
-              <div class="d-flex align-items-center gap-2">
-                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.27472 2.63934L2.4474 1.81202C2.14279 1.50741 1.64892 1.50741 1.34431 1.81202C1.0397 2.11663 1.0397 2.6105 1.34431 2.91511L2.17163 3.74243L-0.00683594 5.9209H5.45319V0.460873L3.27472 2.63934Z" fill="#E3507A" />
-                </svg>
-
-                <label class="overview-box-per red">-5.23%</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-12 col-sm-3 col-lg-2 overview-box d-flex gap-4 align-items-center p-3 px-4">
-          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.87" d="M11.4719 22.2236C5.47266 22.2236 0.609375 17.3602 0.609375 11.361C0.609375 5.36182 5.47266 0.498535 11.4719 0.498535C17.471 0.498535 22.3343 5.36182 22.3343 11.361C22.3343 17.3602 17.4711 22.2236 11.4719 22.2236Z" fill="#494767" />
-            <path d="M11.543 11.6062L13.2134 10.9959L13.6289 9.4346L13.6147 9.39587L11.9704 9.99657L13.1551 5.53564H9.79524L8.24592 11.3573L6.95233 11.8298L6.5249 13.4395L7.81749 12.9673L6.90437 16.3982H15.8463L16.4196 14.2629H10.8374L11.543 11.6062Z" fill="#151334" />
-          </svg>
-
-
-          <div class="d-flex flex-column align-items-end gap-2">
-            <div class="d-flex align-items-center gap-3">
-              <label class="overview-box-number">380.234</label>
-              <span class="overview-box-currency">LTC</span>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-              <svg width="32" height="11" viewBox="0 0 32 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.59375 10.0992C1.59375 10.0992 4.1346 5.38921 7.05378 7.01097C9.97295 8.63274 10.3513 10.0992 12.9461 9.12614C15.5409 8.15308 15.7034 -0.070819 17.9738 1.55095C20.2443 3.17271 25.8486 6.41625 30.7139 1.55095" stroke="url(#paint0_linear_21_3057)" stroke-width="1.82001" stroke-linecap="round" stroke-linejoin="round" />
-                <defs>
-                  <linearGradient id="paint0_linear_21_3057" x1="19.579" y1="-0.979235" x2="13.3957" y2="14.7413" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#309AFF" />
-                    <stop offset="0.287496" stop-color="#309AFF" />
-                    <stop offset="0.651175" stop-color="#5364AE" />
-                    <stop offset="1" stop-color="#70366B" stop-opacity="0.01" />
-                  </linearGradient>
-                </defs>
-              </svg>
-
-
-              <div class="d-flex align-items-center gap-2">
-                <svg width="7" height="6" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.09552 3.7425L3.2682 4.56982C2.96359 4.87443 2.46972 4.87443 2.16511 4.56982C1.8605 4.2652 1.8605 3.77133 2.16511 3.46672L2.99243 2.6394L0.813965 0.460938H6.27399V5.92096L4.09552 3.7425Z" fill="#50E3C2" />
-                </svg>
-
-                <label class="overview-box-per green">+39.69%</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-3 col-lg-2 add-currency-btn d-flex align-items-center justify-content-center p-3 px-4">
-          <span class="text-white opacity-50">+ Add Currency</span>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section mt-4">
-      <label class="section-title text-uppercase">Wallets</label>
-      <app-line-chart height="397.2px" width="auto" [lines]="lines" [highLightedPoint]="{ x: 77, y: 95 }"></app-line-chart>
-    </div>
-
-    <div class="row mt-5">
-      <div class="section col-8">
-        <label class="section-title text-uppercase">Trend</label>
-        <div class="d-flex mt-3 w-100">
-          <div class="col-4 d-flex flex-column gap-2">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center gap-2">
-                <label class="overview-box-currency">BTC</label>
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.48148 6.82331L1.75146 4.09329L4.48148 1.36328" stroke="#37346F" stroke-width="1.82001" />
-                  <path d="M7.21139 10.4634L9.94141 7.73343L7.21139 5.00342" stroke="#37346F" stroke-width="1.82001" />
-                </svg>
-                <label class="overview-box-currency">USD</label>
-              </div>
-              <div class="d-flex gap-2">
-                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.38361 2.362L2.55629 1.53468C2.25168 1.23007 1.75781 1.23007 1.4532 1.53468C1.14859 1.83929 1.14859 2.33316 1.4532 2.63777L2.28052 3.46509L0.102051 5.64355H5.56208V0.183529L3.38361 2.362Z" fill="#E3507A" />
-                </svg>
-                <label class="overview-box-per red">-5.23%</label>
-              </div>
-            </div>
-
-            <label class="overview-box-number">7.356,67</label>
-
-            <svg width="100%" height="100%" viewBox="0 0 169 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_d_21_3149)">
-                <path d="M157.772 1.77393C157.772 1.77393 150.01 19.064 143.218 19.064C136.426 19.064 133.515 9.05396 124.783 9.05396C116.05 9.05396 105.377 34.5341 96.645 34.5341C87.9126 34.5341 77.2396 19.064 71.418 19.064C65.5964 19.064 58.8045 30.8941 48.1315 30.8941C38.6305 30.8941 38.6305 24.87 35.518 26.4918C32.4055 28.1135 29.5039 28.1364 24.7488 23.219C19.9937 18.3017 16.4488 28.0843 11.2613 23.219" stroke="url(#paint0_linear_21_3149)" stroke-width="2.73001" stroke-linecap="round" stroke-linejoin="round" />
+      <div class="row mt-3 gap-y-20">
+        <div class="col-12 col-md-6 col-xxl-3">
+          <app-currency-card [number]="1.9678" currency="BTC" per="+12,5%" chartDirection="up" [chart]="currencyChart1" [selected]="true">
+            <svg img width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d_21_3031)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3401 8.23002L11.3538 11.0403H15.3859C16.1021 11.0403 16.6824 10.458 16.6788 9.74191L16.6778 9.52841C16.6744 8.81218 16.0884 8.23002 15.3721 8.23002H11.8921H11.3401ZM17.1908 15.3121L17.1897 15.0865C17.1859 14.2877 16.533 13.6391 15.7343 13.6391H15.3988H11.3667L11.382 16.7596H15.7495C16.5482 16.7596 17.1947 16.1099 17.1908 15.3121ZM18.4704 12.1221C19.2728 12.8615 19.7816 13.9152 19.7873 15.0866L19.7884 15.3122C19.7993 17.5423 17.993 19.3574 15.762 19.3574H15.6633L15.669 20.551H13.0713L13.0655 19.3574H12.0008L12.0066 20.551H9.40891L9.40308 19.3574H8.79668H7.50838L7.49571 16.7597H8.784L8.76886 13.6392L8.75607 11.0404L8.74238 8.2301H7.45408L7.44141 5.63141H9.3361L9.32903 4.1709H11.9267L11.9338 5.63141H12.9986L12.9914 4.1709H15.5892L15.5963 5.64364C17.6357 5.76738 19.2656 7.45968 19.2757 9.52849L19.2767 9.74199C19.2811 10.6385 18.9778 11.4625 18.4704 12.1221Z" fill="white" />
               </g>
               <defs>
-                <filter id="filter0_d_21_3149" x="0.796442" y="0.408691" width="167.441" height="53.6903" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <filter id="filter0_d_21_3031" x="0.161372" y="0.530881" width="26.9072" height="30.94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                  <feOffset dy="9.10004" />
-                  <feGaussianBlur stdDeviation="4.55002" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 0.0456816 0 0 0 0 0.0410428 0 0 0 0 0.12686 0 0 0 0.54362 0" />
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_21_3149" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_21_3149" result="shape" />
+                  <feOffset dy="3.64002" />
+                  <feGaussianBlur stdDeviation="3.64002" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0744452 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_21_3031" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_21_3031" result="shape" />
                 </filter>
-                <linearGradient id="paint0_linear_21_3149" x1="67.2836" y1="-6.89947" x2="85.5706" y2="55.6447" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#A330FF" stop-opacity="0.01" />
-                  <stop offset="0.393247" stop-color="#BC3DCB" />
-                  <stop offset="1" stop-color="#E3507A" />
-                </linearGradient>
               </defs>
             </svg>
+          </app-currency-card>
+        </div>
 
+        <div class="col-12 col-md-6 col-xxl-3">
+          <app-currency-card [number]="23.234" currency="ETH" per="-5.23%" chartDirection="low" [chart]="currencyChart2">
+            <svg img width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17726 9.3623L0.452148 12.6631L8.17726 16.9511L15.8993 12.6631L8.17726 9.3623Z" fill="#010101" fill-opacity="0.6" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.452148 12.6634L8.17726 16.9513V0.621094L0.452148 12.6634Z" fill="#535175" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17725 0.621094V16.9513L15.8993 12.6634L8.17725 0.621094Z" fill="#434162" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.452148 14.0386L8.17726 24.2635V18.3265L0.452148 14.0386Z" fill="#535175" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17725 18.3265V24.2635L15.9054 14.0386L8.17725 18.3265Z" fill="#434162" />
+            </svg>
+          </app-currency-card>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-xxl-3">
+          <app-currency-card [number]="380.234" currency="LTC" per="+39.69%" chartDirection="up" [chart]="currencyChart3">
+            <svg img width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.87" d="M11.4719 22.2236C5.47266 22.2236 0.609375 17.3602 0.609375 11.361C0.609375 5.36182 5.47266 0.498535 11.4719 0.498535C17.471 0.498535 22.3343 5.36182 22.3343 11.361C22.3343 17.3602 17.4711 22.2236 11.4719 22.2236Z" fill="#494767" />
+              <path d="M11.543 11.6062L13.2134 10.9959L13.6289 9.4346L13.6147 9.39587L11.9704 9.99657L13.1551 5.53564H9.79524L8.24592 11.3573L6.95233 11.8298L6.5249 13.4395L7.81749 12.9673L6.90437 16.3982H15.8463L16.4196 14.2629H10.8374L11.543 11.6062Z" fill="#151334" />
+            </svg>
+          </app-currency-card>
+        </div>
+
+    
+
+          <div class="col-12 col-md-6 col-xxl-3">
+            <div class="add-currency-btn d-flex align-items-center justify-content-center p-3 px-4 h-100">
+              <span class="text-white opacity-50">+ Add Currency</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    <div class="section mt-4">
+      <label class="section-title text-uppercase">Wallets</label>
+      <app-line-chart class="mt-3" height="397.2px"
+                      width="100%"
+                      [lines]="lines"
+                      [highLightedPoint]="{ x: 77, y: 95 }"
+                      [xAxesLabels]="['10', '20', '30', '40', '50', '60', '70', '80', '90']"
+                      [yAxesLabels]="['1000', '2000', '3000', '4000', '5000', '6000']"></app-line-chart>
+    </div>
+
+    <div class="row mt-5 gap-y-25">
+      <div class="section col-12 col-lg-8">
+        <label class="section-title text-uppercase">Trend</label>
+        <div class="row d-flex mt-3 w-100">
+          <div class="col-12 col-sm-6 col-lg-4" *ngFor="let card of trendCards">
+            <div class="d-flex flex-column gap-2 p-2">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <label class="overview-box-currency">{{card.currency1}}</label>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.48148 6.82331L1.75146 4.09329L4.48148 1.36328" stroke="#37346F" stroke-width="1.82001" />
+                    <path d="M7.21139 10.4634L9.94141 7.73343L7.21139 5.00342" stroke="#37346F" stroke-width="1.82001" />
+                  </svg>
+                  <label class="overview-box-currency">{{card.currency2}}</label>
+                </div>
+                <div class="d-flex gap-2">
+                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.38361 2.362L2.55629 1.53468C2.25168 1.23007 1.75781 1.23007 1.4532 1.53468C1.14859 1.83929 1.14859 2.33316 1.4532 2.63777L2.28052 3.46509L0.102051 5.64355H5.56208V0.183529L3.38361 2.362Z" fill="#E3507A" />
+                  </svg>
+                  <label class="overview-box-per red">{{card.per}}</label>
+                </div>
+              </div>
+
+              <label class="overview-box-number">7.356,67</label>
+              <app-line-chart height="100px" width="100%" [lines]="[card.chart]" [showChartGrids]="false" [margin]="10"></app-line-chart>
+            </div>
           </div>
         </div>
       </div>
@@ -321,12 +193,48 @@
 
 
 
-      <div class="section col-4">
+      <div class="section col-12 col-lg-4">
         <div class="d-flex align-items-center justify-content-between gap-2">
           <label class="section-title text-uppercase">History</label>
           <div class="see-all-btn">See All</div>
         </div>
-        <div class="d-flex flex-column mt-3 w-100">
+        <div class="d-flex flex-column mt-3 w-100 gap-3">
+          <div class="d-grid grid-cols align-items-center">
+            <div class="row-item">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.36475" y="0.543457" width="18.2001" height="18.2001" rx="9.10004" stroke="#373467" stroke-width="0.910004" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74693 7.34843L9.75399 8.9097H11.8342C12.2037 8.9097 12.5031 8.58621 12.5013 8.18837L12.5007 8.06976C12.4989 7.67185 12.1966 7.34843 11.8271 7.34843H10.0317H9.74693ZM12.7652 11.2829L12.7646 11.1576C12.7626 10.7138 12.4258 10.3535 12.0138 10.3535H11.8406H9.76043L9.76831 12.0871H12.0216C12.4336 12.0871 12.7672 11.7261 12.7652 11.2829ZM13.4254 9.51062C13.8393 9.92136 14.1018 10.5068 14.1048 11.1575L14.1054 11.2829C14.111 12.5218 13.1791 13.5302 12.0281 13.5302H11.9771L11.9801 14.1933H10.6399L10.6369 13.5302H10.0876L10.0906 14.1933H8.75042L8.74741 13.5302H8.43456H7.76991L7.76337 12.087H8.42802L8.4202 10.3534L8.4136 8.90964L8.40654 7.34837H7.74189L7.73535 5.90466H8.71285L8.7092 5.09326H10.0494L10.053 5.90466H10.6024L10.5987 5.09326H11.9389L11.9426 5.91145C12.9947 5.9802 13.8356 6.92036 13.8408 8.0697L13.8414 8.18831C13.8436 8.68638 13.6872 9.14412 13.4254 9.51062Z" fill="#59588D" />
+              </svg>
+            </div>
+            <div class="row-item">
+              Akhirnya Joko bayar Utang
+            </div>
+            <div class="row-item green">
+              +0.025
+            </div>
+            <div class="row-item text-end">
+              08/26/2018
+            </div>
+          </div>
+
+          <div class="d-grid grid-cols align-items-center">
+            <div class="row-item">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1.36475" y="0.543457" width="18.2001" height="18.2001" rx="9.10004" stroke="#373467" stroke-width="0.910004" />
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74693 7.34843L9.75399 8.9097H11.8342C12.2037 8.9097 12.5031 8.58621 12.5013 8.18837L12.5007 8.06976C12.4989 7.67185 12.1966 7.34843 11.8271 7.34843H10.0317H9.74693ZM12.7652 11.2829L12.7646 11.1576C12.7626 10.7138 12.4258 10.3535 12.0138 10.3535H11.8406H9.76043L9.76831 12.0871H12.0216C12.4336 12.0871 12.7672 11.7261 12.7652 11.2829ZM13.4254 9.51062C13.8393 9.92136 14.1018 10.5068 14.1048 11.1575L14.1054 11.2829C14.111 12.5218 13.1791 13.5302 12.0281 13.5302H11.9771L11.9801 14.1933H10.6399L10.6369 13.5302H10.0876L10.0906 14.1933H8.75042L8.74741 13.5302H8.43456H7.76991L7.76337 12.087H8.42802L8.4202 10.3534L8.4136 8.90964L8.40654 7.34837H7.74189L7.73535 5.90466H8.71285L8.7092 5.09326H10.0494L10.053 5.90466H10.6024L10.5987 5.09326H11.9389L11.9426 5.91145C12.9947 5.9802 13.8356 6.92036 13.8408 8.0697L13.8414 8.18831C13.8436 8.68638 13.6872 9.14412 13.4254 9.51062Z" fill="#59588D" />
+              </svg>
+            </div>
+            <div class="row-item">
+              Akhirnya Joko bayar Utang
+            </div>
+            <div class="row-item green">
+              +0.025
+            </div>
+            <div class="row-item text-end">
+              08/26/2018
+            </div>
+          </div>
+
           <div class="d-grid grid-cols align-items-center">
             <div class="row-item">
               <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">

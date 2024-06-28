@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ChartColor } from '../../types/chartColor.type';
 import { Line } from '../../types/line.type';
 import { Point } from '../../types/point.type';
@@ -9,6 +9,9 @@ import { Point } from '../../types/point.type';
   styleUrls: ['./line-chart.component.css']
 })
 export class LineChartComponent implements OnInit, AfterViewInit {
+  @ViewChild('myCanvas') canvas: ElementRef<HTMLCanvasElement>;
+
+  @Input() id: string = 'myCanvas';
   @Input() height: string = '';
   @Input() width: string = '';
   @Input() lines: Line[] = [];
@@ -17,18 +20,26 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   @Input() yAxesLabels: string[] = [];
   @Input() showChartGrids: boolean = true;
   @Input() margin: number = 50;
+  @Input() lineWidth: number = 2;
+
+  constructor(private changeRef: ChangeDetectorRef) {
+
+  }
+
   ngOnInit() {
 
   }
 
   ngAfterViewInit() {
+    this.changeRef.detectChanges();
+
     this.draw();
   }
 
 
 
   draw() {
-    const canvas: any = document.getElementById('myCanvas');
+    const canvas: any = this.canvas.nativeElement;
     if (canvas) {
       const scale = window.devicePixelRatio || 1;
       canvas.width = canvas.clientWidth * scale;
@@ -44,15 +55,15 @@ export class LineChartComponent implements OnInit, AfterViewInit {
       if (ctx) {
 
         if (this.showChartGrids) {
-          this.drawGrid(ctx, 50, 50, graphWidth + 100, graphHeight - 20);
+          this.drawGrid(ctx, margin, margin, graphWidth + 100, graphHeight - 20);
         }
 
         if (this.xAxesLabels.length > 0) {
-          this.labelXAxes(ctx, 50, 50, graphWidth, graphHeight);
+          this.labelXAxes(ctx, margin, margin, graphWidth, graphHeight);
         }
 
         if (this.yAxesLabels.length > 0) {
-          this.labelYAxes(ctx, 50, 50, graphWidth, graphHeight);
+          this.labelYAxes(ctx, margin, margin, graphWidth, graphHeight);
         }
 
         if (this.lines && this.lines.length > 0) {
@@ -117,47 +128,63 @@ export class LineChartComponent implements OnInit, AfterViewInit {
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.bezierCurveTo(midX, y1, midX, y2, x2, y2);
-    ctx.lineWidth = radius * 2; // Adjust line width for visual effect
+    ctx.lineWidth = radius * this.lineWidth; // Adjust line width for visual effect
     ctx.stroke();
   }
 
   drawGrid(ctx: any, shapeX: any, shapeY: any, shapeWidth: any, shapeHeight: any) {
-    const gridHeight = 40; // Size of each grid square
-    const gridWidth = 120; // Size of each grid square
+    //debugger;
+    //const gridHeight = shapeHeight / (this.yAxesLabels?.length > 0 ? this.yAxesLabels.length : 100); // Size of each grid square
+    //let gridWidth = shapeWidth / (this.xAxesLabels?.length > 0 ? this.xAxesLabels.length : 100); // Size of each grid square
 
-    for (let x = shapeX; x <= shapeX + shapeWidth; x += gridWidth) {
-      for (let y = shapeY; y <= shapeY + shapeHeight; y += gridHeight) {
-        // Calculate color based on grid position
+    //console.log(gridHeight);
+    //console.log(gridWidth);
 
-        const gradient = ctx.createLinearGradient(x, y, gridWidth, gridHeight);
+    //for (let x = shapeX; x <= shapeX + shapeWidth; x += gridWidth) {
+    //  for (let y = shapeY; y <= shapeY + shapeHeight; y += gridHeight) {
+    //    // Calculate color based on grid position
+
+    //    const gradient = ctx.createLinearGradient(x, y, gridWidth, gridHeight);
+    //    gradient.addColorStop(0, 'rgb(27, 25, 61, 90.25%)'); // Start color
+    //    gradient.addColorStop(1, 'rgb(35, 33, 76, 0.01%)'); // End color
+
+    //    ctx.fillStyle = gradient;
+    //    ctx.fillRect(x, y, gridWidth, gridHeight);
+    //  }
+    //}
+
+    //ctx.strokeStyle = '#1C1A41';
+    //ctx.lineWidth = 10;
+
+
+    const gridHeight = (shapeHeight - this.margin) / (this.yAxesLabels?.length > 0 ? this.yAxesLabels.length : 100);
+    const gridWidth = (shapeWidth - this.margin) / (this.xAxesLabels?.length > 0 ? this.xAxesLabels.length : 100);
+    const spacing = 5; // Space between rectangles
+    const numRows = Math.floor((shapeHeight - this.margin) / (gridHeight - 5));
+    const numCols = Math.floor((shapeWidth - this.margin) / (gridWidth - 5));
+    const cornerRadius = 5; // Radius of rounded corners
+
+
+
+
+    ctx.clearRect(0, 0, shapeWidth, shapeHeight);
+
+    for (let row = 0; row < numRows; row++) {
+      for (let col = 0; col < numCols; col++) {
+        const x = shapeX + (col * (gridWidth + spacing));
+        const y = shapeY + (row * (gridHeight + spacing));
+
+
+        let gradient = ctx.createLinearGradient(x, y, gridWidth, gridHeight);
         gradient.addColorStop(0, 'rgb(27, 25, 61, 90.25%)'); // Start color
         gradient.addColorStop(1, 'rgb(35, 33, 76, 0.01%)'); // End color
 
-        ctx.fillStyle = gradient;
-        ctx.fillRect(x, y, gridWidth, gridHeight);
+        this.drawRoundedRect(ctx, x, y, gridWidth, gridHeight, cornerRadius, gradient);
       }
     }
 
-    ctx.strokeStyle = '#1C1A41';
-    ctx.lineWidth = 10;
 
-    // Draw vertical grid lines
-    for (let x = shapeX; x <= shapeX + shapeWidth; x += gridWidth) {
-      ctx.beginPath();
-      ctx.moveTo(x, shapeY);
-      ctx.lineTo(x, shapeY + shapeHeight);
-      ctx.stroke();
-    }
-
-
-
-    // Draw horizontal grid lines
-    for (let y = shapeY; y <= shapeY + shapeHeight; y += gridHeight) {
-      ctx.beginPath();
-      ctx.moveTo(shapeX, y);
-      ctx.lineTo(shapeX + shapeWidth, y);
-      ctx.stroke();
-    }
+    this.clearColors(ctx);
   }
 
   drawHighLightPoint(ctx: any, pointIndex: number, graphWidth: any, graphHeight: any, canvas: any, margin: number) {
@@ -168,7 +195,7 @@ export class LineChartComponent implements OnInit, AfterViewInit {
     const rectX = margin + (this.highLightedPoint.x * xScale);
     const rectY = 0;
 
-    const rectHeight = graphHeight + (margin * 2); // Height extends to the bottom of the canvas
+    const rectHeight = graphHeight + 25; // Height extends to the bottom of the canvas
 
     // Draw rectangle around the point
     const gradient = ctx.createLinearGradient(rectX - (margin * 1.5), rectY, (margin * 3), rectHeight);
@@ -263,12 +290,17 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   }
   // Function to label x and y axes
   labelXAxes(ctx: any, shapeX: any, shapeY: any, shapeWidth: any, shapeHeight: any) {
-    ctx.font = '10.92px Arial';
+       ctx.font = '10.92px Arial';
     ctx.fillStyle = '#59588D';
 
+    let gap = shapeWidth / this.xAxesLabels.length;
     // Label x axis
-    for (let x = shapeX; x <= shapeX + shapeWidth; x += 90) { // Adjust the interval as needed
-      ctx.fillText('10:59PM', x + 2, shapeY + shapeHeight);
+    //for (let x = shapeX; x <= shapeX + shapeWidth; x += gap) { // Adjust the interval as needed
+    //  ctx.fillText('10:59PM', x + 2, shapeY + shapeHeight);
+    //}
+
+    for (let i = 0; i < this.xAxesLabels.length; i++) { // Adjust the interval as needed
+      ctx.fillText(this.xAxesLabels[i], shapeX + (gap * i), shapeY + shapeHeight);
     }
   }
 
@@ -277,9 +309,15 @@ export class LineChartComponent implements OnInit, AfterViewInit {
     ctx.font = '10.92px Arial';
     ctx.fillStyle = '#59588D';
 
-    // Label y axis
-    for (let y = shapeY; y <= shapeY + shapeHeight; y += 90) { // Adjust the interval as needed
-      ctx.fillText(2000, shapeX - 25, y + 4);
+    //// Label y axis
+    //for (let y = shapeY; y <= shapeY + shapeHeight; y += 90) { // Adjust the interval as needed
+    //  ctx.fillText(2000, shapeX - this.margin, y + 4);
+    //}
+
+    let gap = shapeHeight / this.yAxesLabels.length;
+
+    for (let i = 0; i < this.yAxesLabels.length; i++) { // Adjust the interval as needed
+      ctx.fillText(this.yAxesLabels[i], shapeX - 50, shapeY + (gap * i));
     }
   }
 
@@ -288,6 +326,11 @@ export class LineChartComponent implements OnInit, AfterViewInit {
     ctx.shadowBlur = 0;
     ctx.shadowOffsetX = 0;
     ctx.shadowOffsetY = 0;
+  }
+
+  clearColors(ctx: any) {
+    ctx.fillStyle = 'transparent';
+    ctx.strokeStyle = 'transparent';
   }
 
   getColor(ctx: any, color: ChartColor | any, x0: any, y0: any, r0: any, x1: any, y1: any, r1: any) {

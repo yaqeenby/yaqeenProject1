@@ -19,3 +19,7 @@
 body {
   font-family: HelveticaNeueMedium;
 }
+/*
+*, ::after, ::before {
+  box-sizing: unset;
+}*/

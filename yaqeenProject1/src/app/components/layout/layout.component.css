@@ -1,5 +1,5 @@
 .sideMenu {
-  background-color: #262250;
+  background-color: #262250 !important;
   height: 100vh;
   background-image: linear-gradient(rgb(38, 34, 80, 65%) 0%, rgb(27, 25, 66, 85%) 57%, rgb(23, 22, 59, 100%) 100%);
 }
@@ -164,4 +164,12 @@
 
 .green {
   color: #50E3C2;
+}
+
+.gap-y-20 {
+    gap: 20px 0;
+}
+
+.gap-y-25 {
+    gap: 25px 0;
 }
